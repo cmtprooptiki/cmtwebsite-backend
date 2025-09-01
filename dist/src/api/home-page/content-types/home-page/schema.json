@@ -21,13 +21,13 @@
             "type": "dynamiczone",
             "components": [
                 "blocks.info-block",
-                "blocks.hero-section",
                 "blocks.milestones-block",
                 "blocks.vertical-accordion-block",
                 "blocks.services-accordion-block",
                 "blocks.logo-carousel-block",
                 "blocks.testimonials-block",
-                "blocks.features-block"
+                "blocks.features-block",
+                "blocks.hero-section-main"
             ]
         }
     }

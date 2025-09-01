@@ -496,13 +496,13 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     blocks: Schema.Attribute.DynamicZone<
       [
         'blocks.info-block',
-        'blocks.hero-section',
         'blocks.milestones-block',
         'blocks.vertical-accordion-block',
         'blocks.services-accordion-block',
         'blocks.logo-carousel-block',
         'blocks.testimonials-block',
         'blocks.features-block',
+        'blocks.hero-section-main',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

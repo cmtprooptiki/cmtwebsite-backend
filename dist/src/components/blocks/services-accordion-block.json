@@ -12,6 +12,18 @@
             "type": "component",
             "component": "elements.service-accordion-item",
             "repeatable": true
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "cta": {
+            "type": "component",
+            "component": "elements.link",
+            "repeatable": false
         }
     },
     "config": {}

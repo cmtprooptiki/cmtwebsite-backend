@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_blocks_hero_section_mains",
+  "info": {
+    "displayName": "Hero Section Main"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "blue"
+      ]
+    },
+    "milestones": {
+      "type": "component",
+      "component": "elements.milestone",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

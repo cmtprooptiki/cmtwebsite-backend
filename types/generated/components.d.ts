@@ -84,6 +84,21 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksHeroSectionMain extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hero_section_mains';
+  info: {
+    displayName: 'Hero Section Main';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+    milestones: Schema.Attribute.Component<'elements.milestone', true>;
+    theme: Schema.Attribute.Enumeration<['black', 'blue']>;
+  };
+}
+
 export interface BlocksInfoBlock extends Struct.ComponentSchema {
   collectionName: 'components_blocks_info_blocks';
   info: {
@@ -91,6 +106,7 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
     headline: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'videos'>;
     theme: Schema.Attribute.Enumeration<['bg-black', 'bg-red-600']>;
@@ -150,7 +166,9 @@ export interface BlocksServicesAccordionBlock extends Struct.ComponentSchema {
     displayName: 'services accordion block';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
     heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
     items: Schema.Attribute.Component<'elements.service-accordion-item', true>;
   };
 }
@@ -200,6 +218,7 @@ export interface BlocksVerticalAccordionBlock extends Struct.ComponentSchema {
     displayName: 'VerticalAccordionBlock';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
     items: Schema.Attribute.Component<'blocks.vertical-accordion-item', true>;
     theme: Schema.Attribute.Enumeration<['black', 'white']>;
     title: Schema.Attribute.String;
@@ -353,6 +372,7 @@ declare module '@strapi/strapi' {
       'blocks.full-image': BlocksFullImage;
       'blocks.heading': BlocksHeading;
       'blocks.hero-section': BlocksHeroSection;
+      'blocks.hero-section-main': BlocksHeroSectionMain;
       'blocks.info-block': BlocksInfoBlock;
       'blocks.logo-carousel-block': BlocksLogoCarouselBlock;
       'blocks.milestones-block': BlocksMilestonesBlock;
